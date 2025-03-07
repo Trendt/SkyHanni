@@ -30,12 +30,13 @@ object StarCult {
 
     private fun isCultHappening(): Boolean {
         val day = SkyBlockTime.now().day
-        return day % 7 == 0 && day != 0 && SkyBlockTime.now().hour < 6
+        return day % 7 == 0 &&
+            SkyBlockTime.now().hour < 6
     }
 
     private fun sendNotificationMessage() {
         ChatUtils.clickToActionOrDisable(
-            "Cult of the Fallen Star happening. Click to warp to the Forge!",
+            "Cult of the Fallen Star is happening. Click to warp to the Forge!",
             config::starCult,
             actionName = "warp to forge",
             action = { HypixelCommands.warp("forge") },
