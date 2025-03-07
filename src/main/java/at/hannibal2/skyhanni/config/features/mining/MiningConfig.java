@@ -136,4 +136,10 @@ public class MiningConfig {
     @ConfigEditorBoolean
     @FeatureToggle
     public boolean highlightPrecisionMiningParticles = false;
+
+    @Expose
+    @ConfigOption(name = "Star Cult Reminder", desc = "Reminder for the Cult of the Fallen Star event.")
+    @ConfigEditorBoolean
+    @FeatureToggle
+    public boolean starCult = false;
 }
